@@ -1,0 +1,40 @@
+{
+    "name": "eMag only",
+    "version": "1.0",
+    "description": "Filter out external vendors from eMag.ro",
+    "homepage_url": "https://github.com/vrachieru/emag-only",
+    "manifest_version": 2,
+
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "tabs",
+        "*://*.emag.ro/*"
+    ],
+
+    "icons": {
+        "128": "icon.png"
+    },
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "*://*.emag.ro/*"
+            ],
+            "css": [
+                "content.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}

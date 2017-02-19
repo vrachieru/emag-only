@@ -1,0 +1,26 @@
+.emag-only-status {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    padding: 0 3px 0 3px;
+    border-radius: 10%;
+    cursor: default;
+}
+
+.emag-only-status.on {
+    background-color: #090;
+}
+
+.emag-only-status.off {
+    background-color: red;
+}
+
+.navbar-branding {
+    position: relative;
+}
+
+.navbar-branding .emag-only-status {
+    top: -10px;
+}
